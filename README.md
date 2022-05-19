@@ -1,9 +1,9 @@
 <div>
-<header align="center">
-  <img style="border-radius:25%" src="./assets/codeby.png"/>
+<div align="center">
+  <img src="./assets/codeby.png" height="300px"/>
   <h1>Teste desenvolvido para a posição de Desenvolvedor Front-End na CodeBy</h1>
   <br />
-</header>
+</div>
 <main>
 
 ## Aplicando:

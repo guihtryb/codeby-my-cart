@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import CartList from './components/CartList';
 import CartTotalPrice from './components/CartTotalPrice';
-import FreeDelieveryMsg from './components/FreeDelieveryMsg';
+import FreeDeliveryMsg from './components/FreeDeliveryMsg';
 import context from './context/Context';
 
 import './styles/CartApp.css';
@@ -27,9 +27,15 @@ function CartApp() {
         <CartTotalPrice totalPrice={cartTotalPrice} />
         {
         cartTotalPrice > 10
-          && <FreeDelieveryMsg />
+          && <FreeDeliveryMsg />
         }
         <hr className="cart-box-sub-total" />
+        <button
+          className="finish-buy"
+          type="button"
+        >
+          Finalizar compra
+        </button>
       </div>
     </div>
   );

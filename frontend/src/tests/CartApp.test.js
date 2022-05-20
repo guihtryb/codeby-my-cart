@@ -94,7 +94,7 @@ describe('Testando CartApp', () => {
 
       expect(await screen.findByTestId('cart-item-selling-price-0')).toBeInTheDocument();
     });
-    it('um h2 com o data-testid igual a `cart-total-price', async () => {
+    it('um h2 com o data-testid igual a `cart-total-price` e preço correto', async () => {
       render(
         <context.Provider value={contextValue}>
           <CartApp />
@@ -102,6 +102,9 @@ describe('Testando CartApp', () => {
       );
 
       expect(await screen.findByTestId('cart-total-price')).toBeInTheDocument();
+      expect(await screen.findByTestId('cart-total-price')).toHaveTextContent(
+        `Total R$ ${contextValue.cartTotalPrice}`,
+      );
     });
     it('um botão com o texto igual a `finalizar compra`', () => {
       render(

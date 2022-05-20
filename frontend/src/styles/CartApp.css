@@ -69,13 +69,13 @@ hr {
 }
 
 .free-delivery-msg {
-  background-color: #a4e2a9;
-  color: #4C8C27;
+  background-color: #baf3be;
+  color: #3d8118;
   width: fit-content;
-  margin: 1.8rem auto;
+  margin: 1.2rem auto;
   padding: 10px 20px;
   border-radius: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 500;
 }
 

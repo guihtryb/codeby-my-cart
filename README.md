@@ -43,5 +43,9 @@
     - 'items-above-ten': Valor acima de R$10
     - 'items-under-ten': Valor abaixo de R$10
   
+  ## Netlify
+  
+  - A aplicação está deployada no Netlify em: <a href="https://codeby-mycart.netlify.app/">https://codeby-mycart.netlify.app/</a> 
+  
   </main>
 </div>

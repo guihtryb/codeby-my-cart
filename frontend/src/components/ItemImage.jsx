@@ -14,8 +14,8 @@ function ItemImage({ url, title, index }) {
 
 ItemImage.propTypes = {
   index: PropTypes.number.isRequired,
-  title: PropTypes.number.isRequired,
-  url: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 export default ItemImage;

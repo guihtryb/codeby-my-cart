@@ -8,13 +8,13 @@ function Provider({ children }) {
   const [itemsOnCart, setItemsOnCart] = useState([]);
   const [cartTotalPrice, setCartTotalPrice] = useState(0);
 
-  const getitems = async (endpoint = 'items-above-ten') => {
+  const getitems = async (endpoint = 'items-under-ten') => {
     const { data: { items } } = await api.get(endpoint);
 
     setItemsOnCart(items);
   };
 
-  const getTotalPrice = async (endpoint = 'items-above-ten') => {
+  const getTotalPrice = async (endpoint = 'items-under-ten') => {
     const { data: { value } } = await api.get(endpoint);
     const totalPrice = value / 100;
 
@@ -22,8 +22,9 @@ function Provider({ children }) {
   };
 
   useEffect(() => {
-    getitems();
-    getTotalPrice();
+    const endpoint = 'items-above-ten';
+    getitems(endpoint);
+    getTotalPrice(endpoint);
   }, []);
 
   const contextValue = {

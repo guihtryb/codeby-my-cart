@@ -1,4 +1,5 @@
 import React from 'react';
+import CartList from './components/CartList';
 import './styles/CartApp.css';
 
 function CartApp() {
@@ -15,6 +16,7 @@ function CartApp() {
           Meu carrinho
         </h1>
         <hr />
+        <CartList />
       </div>
     </div>
   );

@@ -1,0 +1,26 @@
+.cart-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cart-item {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  margin-left: 1rem;
+  margin-top: 1.2rem;
+}
+
+.cart-item-title {
+  font-size: 1.1rem;
+}
+
+.cart-item-image {
+  max-width: 7rem;
+  border: 1px solid rgb(177, 173, 173);
+  padding: 0 1rem;
+  margin-right: 1rem;
+}

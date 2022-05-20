@@ -9,6 +9,7 @@ import items from './mocks/items';
 describe('Testando CartApp', () => {
   const contextValue = {
     itemsOnCart: items,
+    cartTotalPrice: 14.01,
   };
 
   describe('Deve possuir', () => {

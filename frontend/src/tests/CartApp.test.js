@@ -118,19 +118,20 @@ describe('Testando CartApp', () => {
     describe('Caso o valor total da compra', () => {
       describe('ultrapasse 10 reais', () => {
         it('deve conter um elemento com o texto `Parabéns, sua compra tem frete grátis !`', async () => {
+          contextValue.cartTotalPrice = 25;
           render(
             <context.Provider value={contextValue}>
-              {' '}
               <CartApp />
             </context.Provider>,
           );
 
-          expect(screen.getByTestId('free-frete-msg')).toBeInTheDocument();
-          expect(screen.getByTestId('free-frete-msg')).toHaveTextContent('Parabéns, sua compra tem frete grátis !');
+          expect(await screen.findByTestId('free-delivery-msg')).toBeInTheDocument();
+          expect(await screen.findByTestId('free-delivery-msg')).toHaveTextContent('Parabéns, sua compra tem frete grátis !');
         });
       });
       describe('não ultrapasse 10 reais', () => {
         it('não deve conter um elemento com o texto `Parabéns, sua compra tem frete grátis !`', async () => {
+          contextValue.cartTotalPrice = 6;
           render(
             <context.Provider value={contextValue}>
               {' '}
@@ -138,8 +139,7 @@ describe('Testando CartApp', () => {
             </context.Provider>,
           );
 
-          expect(screen.getByTestId('free-frete-msg')).not.toBeInTheDocument();
-          expect(screen.getByTestId('free-frete-msg')).not.toHaveTextContent('Parabéns, sua compra tem frete grátis !');
+          expect(screen.queryByTestId('free-delivery-msg')).not.toBeInTheDocument();
         });
       });
     });

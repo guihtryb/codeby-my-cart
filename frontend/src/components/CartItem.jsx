@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { getItemTitle, getItemPriceConverted } from '../utils';
 import ItemImage from './ItemImage';
+import ItemPrices from './ItemPrices';
 import ItemTitle from './ItemTitle';
 
 function CartItem({ item, index }) {
@@ -24,17 +25,10 @@ function CartItem({ item, index }) {
           title={title}
           index={index}
         />
-        <span
-          data-testid={`cart-item-price-${index}`}
-          className="cart-item-price"
-        >
-          {`R$ ${itemPrice}`}
-        </span>
-        <span
-          data-testid={`cart-item-selling-price-${index}`}
-        >
-          {`R$ ${itemSellingPrice}`}
-        </span>
+        <ItemPrices
+          price={itemPrice}
+          sellingPrice={itemSellingPrice}
+        />
       </div>
     </li>
   );

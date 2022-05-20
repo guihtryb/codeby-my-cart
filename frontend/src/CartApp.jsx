@@ -1,14 +1,13 @@
 import React, { useContext } from 'react';
 import CartList from './components/CartList';
 import CartTotalPrice from './components/CartTotalPrice';
+import FreeDelieveryMsg from './components/FreeDelieveryMsg';
 import context from './context/Context';
 
 import './styles/CartApp.css';
 
 function CartApp() {
   const { cartTotalPrice } = useContext(context);
-
-  const freeDeliveryMsg = 'Parabéns, sua compra tem frete grátis !';
 
   return (
     <div
@@ -28,16 +27,9 @@ function CartApp() {
         <CartTotalPrice totalPrice={cartTotalPrice} />
         {
         cartTotalPrice > 10
-          && (
-          <span
-            data-testid="free-delivery-msg"
-            className="free-delivery-msg"
-          >
-            {`${freeDeliveryMsg}`}
-          </span>
-          )
+          && <FreeDelieveryMsg />
         }
-        <hr className="cart-box-sob-total" />
+        <hr className="cart-box-sub-total" />
       </div>
     </div>
   );

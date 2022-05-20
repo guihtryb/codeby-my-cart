@@ -1,26 +1,41 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import getItemTitle from '../utils';
+import { getItemTitle, getItemPriceConverted } from '../utils';
 import ItemImage from './ItemImage';
 import ItemTitle from './ItemTitle';
 
 function CartItem({ item, index }) {
   const title = getItemTitle(item.name);
+  const itemPrice = getItemPriceConverted(item.price);
+  const itemSellingPrice = getItemPriceConverted(item.sellingPrice);
 
   return (
     <li
       data-testid={`cart-item-${index}`}
       className="cart-item"
     >
-      <ItemTitle
-        title={title}
-        index={index}
-      />
       <ItemImage
         url={item.imageUrl}
         title={title}
         index={index}
       />
+      <div className="cart-item-infos">
+        <ItemTitle
+          title={title}
+          index={index}
+        />
+        <span
+          data-testid={`cart-item-price-${index}`}
+          className="cart-item-price"
+        >
+          {`R$ ${itemPrice}`}
+        </span>
+        <span
+          data-testid={`cart-item-selling-price-${index}`}
+        >
+          {`R$ ${itemSellingPrice}`}
+        </span>
+      </div>
     </li>
   );
 }
@@ -31,6 +46,8 @@ CartItem.propTypes = {
     imageUrl: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     uniqueId: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    sellingPrice: PropTypes.number.isRequired,
   }).isRequired,
 };
 

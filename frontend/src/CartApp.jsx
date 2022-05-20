@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import CartList from './components/CartList';
+import CartTotalPrice from './components/CartTotalPrice';
 import context from './context/Context';
 
 import './styles/CartApp.css';
@@ -22,12 +23,7 @@ function CartApp() {
         <hr />
         <CartList />
         <hr className="cart-box-sob-total" />
-        <h2
-          data-testid="cart-total-price"
-          className="cart-total-price"
-        >
-          {`Total R$${cartTotalPrice}`}
-        </h2>
+        <CartTotalPrice totalPrice={cartTotalPrice} />
       </div>
     </div>
   );

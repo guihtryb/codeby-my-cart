@@ -1,27 +1,27 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import getItemTitle from '../utils';
+import ItemImage from './ItemImage';
+import ItemTitle from './ItemTitle';
 
 function CartItem({ item, index }) {
+  const title = getItemTitle(item.name);
+
   return (
     <li
       data-testid={`cart-item-${index}`}
       className="cart-item"
     >
-      <h2
-        data-testid={`cart-item-title-${index}`}
-        className="cart-item-title"
-      >
-        { getItemTitle(item.name) }
-      </h2>
-      <img
-        src={item.imageUrl}
-        alt={`${getItemTitle(item.name)}`}
-        data-testid={`cart-item-image-${index}`}
-        className="cart-item-image"
+      <ItemTitle
+        title={title}
+        index={index}
+      />
+      <ItemImage
+        url={item.imageUrl}
+        title={title}
+        index={index}
       />
     </li>
-
   );
 }
 

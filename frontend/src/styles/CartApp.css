@@ -34,7 +34,7 @@
   height: fit-content;
   justify-content: center;
   margin: 2rem;
-  min-width: 35rem;
+  min-width: 37rem;
   padding: 1rem 0;
   text-align: center;
   width: 45vw;
@@ -57,20 +57,44 @@ hr {
   margin-bottom: 2.8rem;
 }
 
+.cart-box-sub-total {
+  margin-bottom: 1.8rem;
+}
+
 .cart-total-price {
   display: flex;
-  width: 90%;
-  margin: auto;
   justify-content: space-between;
+  margin: auto;
+  width: 90%;
 }
 
 .free-delivery-msg {
   background-color: #a4e2a9;
   color: #4C8C27;
   width: fit-content;
-  margin: 1.2rem auto;
+  margin: 1.8rem auto;
   padding: 10px 20px;
   border-radius: 2rem;
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.finish-buy {
+  background-color: #3569a5;
+  border-radius: 10px;
+  border: none;
+  color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 1.2rem 0;
+  width: 90%;
+  cursor: pointer;
+  transition: all ease .3s;
+}
+
+.finish-buy:hover {
+  background-color: #032de9;
 }

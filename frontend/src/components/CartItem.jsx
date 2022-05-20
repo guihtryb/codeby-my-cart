@@ -28,6 +28,7 @@ function CartItem({ item, index }) {
         <ItemPrices
           price={itemPrice}
           sellingPrice={itemSellingPrice}
+          index={index}
         />
       </div>
     </li>

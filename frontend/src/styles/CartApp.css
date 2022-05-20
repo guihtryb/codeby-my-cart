@@ -49,8 +49,11 @@ hr {
   font-size: 1.7rem;
 }
 
-.cart-box-sob-total {
+.cart-box-sob-total, .cart-box-sub-total {
   margin-top: 1.2rem;
+}
+
+.cart-box-sob-total {
   margin-bottom: 2.8rem;
 }
 

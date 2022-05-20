@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-width: max-content;
+}
+
+.cart-container {
+  align-items: center;
+  background: #CFD7E5;
+  display: flex;
+  min-height: 100vh;
+  height: fit-content;
+  justify-content: center;
+  width: 100%;
+}
+
+.cart-box {
+  background-color: #FFF;
+  border-radius: 12px;
+  box-shadow: 1px 3px 30px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  height: fit-content;
+  justify-content: center;
+  margin: 2rem;
+  min-width: 37rem;
+  padding: 1rem 0;
+  text-align: center;
+  width: 45vw;
+}
+
+hr {
+  border: 1px solid rgb(214, 205, 205);
+}
+
+.cart-title {
+  padding-bottom: 1rem;
+  font-size: 1.7rem;
+}
+
+.cart-box-sob-total, .cart-box-sub-total {
+  margin-top: 1.2rem;
+}
+
+.cart-box-sob-total {
+  margin-bottom: 2.8rem;
+}
+
+.cart-box-sub-total {
+  margin-bottom: 1.8rem;
+}
+
+.cart-total-price {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
+}
+
+.free-delivery-msg {
+  background-color: #baf3be;
+  color: #3d8118;
+  width: fit-content;
+  margin: 1.2rem auto;
+  padding: 10px 20px;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.finish-buy {
+  background-color: #3569a5;
+  border-radius: 10px;
+  border: none;
+  color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 1.2rem 0;
+  width: 90%;
+  cursor: pointer;
+  transition: all ease .3s;
+}
+
+.finish-buy:hover {
+  background-color: #032de9;
+}

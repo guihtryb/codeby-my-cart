@@ -1,6 +1,6 @@
 import React from 'react';
 
-function FreeDelieveryMsg() {
+function FreeDeliveryMsg() {
   const freeDeliveryMsg = 'Parabéns, sua compra tem frete grátis !';
 
   return (
@@ -13,4 +13,4 @@ function FreeDelieveryMsg() {
   );
 }
 
-export default FreeDelieveryMsg;
+export default FreeDeliveryMsg;

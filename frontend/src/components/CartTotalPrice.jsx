@@ -12,7 +12,7 @@ function CartTotalPrice({ totalPrice }) {
       <span
         data-testid="total-price"
       >
-        {`R$ ${totalPrice}`}
+        {`R$ ${(totalPrice)}`}
       </span>
     </h2>
   );
